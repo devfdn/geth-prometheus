@@ -15,3 +15,9 @@ scrape_configs:
   static_configs:
   - targets:
     - geth:6060
+- job_name: gethexporter
+  metrics_path: /metrics
+  scheme: http
+  static_configs:
+  - targets:
+    - gethexporter:9090

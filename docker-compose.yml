@@ -9,12 +9,22 @@ services:
       - "6060:6060"
       - "8545:8545"
 
+  gethexporter:
+    image: devfdn/gethexporter:latest
+    ports:
+      - "9090:9090"
+    depends_on:
+      geth:
+        condition: service_started
+
   prometheus:
     image: prom/prometheus
     ports:
       - "9090:9090"
     depends_on:
       geth:
+        condition: service_started
+      gethexporter:
         condition: service_started
     volumes:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
