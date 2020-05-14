@@ -3,11 +3,15 @@ version: '2.2'
 services:
 
   geth:
-    image: ethereum/client-go:latest
-    command: --goerli --metrics --metrics.expensive --pprof --pprofaddr=0.0.0.0
+    image: etclabscore/core-geth:latest
+    command: --kotti --metrics --metrics.expensive --pprof --pprofaddr=0.0.0.0
+    ports:
+      - "6060:6060"
 
   prometheus:
     image: prom/prometheus
+    ports:
+      - "9090:9090"
     depends_on:
       geth:
         condition: service_started
