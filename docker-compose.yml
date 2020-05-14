@@ -4,9 +4,10 @@ services:
 
   geth:
     image: etclabscore/core-geth:latest
-    command: --kotti --metrics --metrics.expensive --pprof --pprofaddr=0.0.0.0
+    command: --kotti --rpc --rpcport 8542 --metrics --metrics.expensive --pprof --pprofaddr=0.0.0.0
     ports:
       - "6060:6060"
+      - "8542:8542"
 
   prometheus:
     image: prom/prometheus
