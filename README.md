@@ -5,7 +5,13 @@ Collect and visualize [Geth](https://github.com/ethereum/go-ethereum) metrics wi
 ## Demo
 
 ```bash
-> docker-compose up -d
+docker-compose up -d
+```
+
+Kill all running images
+
+```sh
+sudo docker kill $(sudo docker ps -q)
 ```
 
 Runs Geth on the Görli testnet, Prometheus for data storage and Grafana for visualizing.
