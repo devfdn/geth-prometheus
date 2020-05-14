@@ -4,7 +4,7 @@ services:
 
   geth:
     image: etclabscore/core-geth:latest
-    command: --kotti --rpc --rpcport 8542 --metrics --metrics.expensive --pprof --pprofaddr=0.0.0.0
+    command: --kotti --rpc --rpcport 8545 --rpcaddr=0.0.0.0 --metrics --metrics.expensive --pprof --pprofaddr=0.0.0.0
     ports:
       - "6060:6060"
       - "8545:8545"
