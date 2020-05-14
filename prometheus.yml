@@ -20,4 +20,4 @@ scrape_configs:
   scheme: http
   static_configs:
   - targets:
-    - gethexporter:9090
+    - gethexporter:6061
