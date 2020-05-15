@@ -13,6 +13,9 @@ services:
     image: devfdn/gethexporter:latest
     ports:
       - "6061:6061"
+    # environment:
+      # - GETH=http://0.0.0.0:8545
+    network_mode: "host"
     depends_on:
       geth:
         condition: service_started
