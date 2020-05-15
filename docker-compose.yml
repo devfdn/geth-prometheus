@@ -16,7 +16,6 @@ services:
     environment:
       - GETH=http://geth:8545
       - METRICSADDR=0.0.0.0:6061
-    # network_mode: "host"
     depends_on:
       geth:
         condition: service_started
