@@ -21,3 +21,4 @@ scrape_configs:
   static_configs:
   - targets:
     - gethexporter:6061
+    # - 127.0.0.1:6061
