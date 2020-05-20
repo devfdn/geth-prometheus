@@ -14,7 +14,7 @@ Kill all running images
 sudo docker kill $(sudo docker ps -q)
 ```
 
-Runs Geth on the Görli testnet, Prometheus for data storage and Grafana for visualizing.
+Runs Geth on the Mordor testnet, Prometheus for data storage and Grafana for visualizing.
 
 Open [localhost:3000](http://localhost:3000) (admin:admin) to explore the Grafana metrics dashboard.
 
